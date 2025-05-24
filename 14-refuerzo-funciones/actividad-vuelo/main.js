@@ -1,5 +1,9 @@
 // 1. Captura de datos del Form
 const obtenerDatosAvion = () => {
+	// let fechaForm = document.querySelector('#fecha').value;
+	// const fechaObj = new Date(fechaForm);
+	// let fechaLocal = fechaObj.toLocaleDateString()
+
 	let payload = {
 		// Obtenemos el valor de cada input por su id
 		nombre: document.querySelector('#nombre').value,
@@ -17,10 +21,6 @@ const obtenerDatosAvion = () => {
 	};
 
 	return payload; // Retornamos el objeto con todos los datos de la reserva
-
-	// let fechaForm = document.querySelector('#fecha').value;
-	// const fechaObj = new Date(fechaForm);
-	// let fechaLocal = fechaObj.toLocaleDateString()
 };
 
 // 2. Almacenamiento de reservas
@@ -46,7 +46,7 @@ const mostrarReservaAvion = (reserva) => {
         <p><strong>Fecha: </strong> ${reserva.fecha}</p>
         <p><strong>Hora: </strong> ${reserva.hora}</p>
         <p><strong>Clase: </strong> ${reserva.clase}</p>
-        <p><strong>¿Equipaje Adicional?: </strong> ${reserva.equipaje}</p>
+        <p><strong>Notas: </strong> ${reserva.equipaje}</p>
     `;
 };
 
